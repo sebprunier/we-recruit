@@ -1,5 +1,6 @@
 package com.podprogramming.jobs.WeRecruit.client.mvp;
 
+import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.IsWidget;
@@ -25,12 +26,13 @@ public interface IWeRecruitActivity<V extends IWeRecruitActivity.IWeRecruitView>
 		 */
 		public void reset();
 
+		
 		/**
 		 * Returns the combination widget as an instance of HasText
 		 * 
 		 * @return
 		 */
-		public HasText combinationHasText();
+		public HasHTML mailToHasHTML();
 
 		/**
 		 * Returns the label of the 1st selection widget
@@ -185,5 +187,33 @@ public interface IWeRecruitActivity<V extends IWeRecruitActivity.IWeRecruitView>
 		 * @return
 		 */
 		public HasValue<Boolean> item11HasValue();
+
+		/**
+		 * Returns the label of the 12th selection widget
+		 * 
+		 * @return
+		 */
+		public HasText item12HasText();
+
+		/**
+		 * Returns the boolean holder of the 12th selection widget
+		 * 
+		 * @return
+		 */
+		public HasValue<Boolean> item12HasValue();
+		
+		/**
+		 * Returns the label of the 13th selection widget
+		 * 
+		 * @return
+		 */
+		public HasText item13HasText();
+
+		/**
+		 * Returns the boolean holder of the 13th selection widget
+		 * 
+		 * @return
+		 */
+		public HasValue<Boolean> item13HasValue();
 	}
 }

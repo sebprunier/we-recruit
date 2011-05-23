@@ -2,9 +2,10 @@ package com.podprogramming.jobs.WeRecruit.client.mvp;
 
 import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
@@ -14,7 +15,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 public class WeRecruitView extends Composite implements
 		IWeRecruitActivity.IWeRecruitView {
 
-	private final Label combinationLabel;
+	private final HTML mailTo;
 	private final CheckBox item1;
 	private final CheckBox item2;
 	private final CheckBox item3;
@@ -26,6 +27,8 @@ public class WeRecruitView extends Composite implements
 	private final CheckBox item9;
 	private final CheckBox item10;
 	private final CheckBox item11;
+	private final CheckBox item12;
+	private final CheckBox item13;
 
 	public WeRecruitView() {
 		VerticalPanel viewContainer = new VerticalPanel();
@@ -41,55 +44,65 @@ public class WeRecruitView extends Composite implements
 		item2.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item2 );
 		
-		// the first selectable item
+		// the third selectable item
 		item3 = new CheckBox();
 		item3.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item3 );
 
-		// the second selectable item
+		// the fourth selectable item
 		item4 = new CheckBox();
 		item4.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item4 );
 		
-		// the first selectable item
+		// the fifth selectable item
 		item5 = new CheckBox();
 		item5.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item5 );
 
-		// the second selectable item
+		// the sixth selectable item
 		item6 = new CheckBox();
 		item6.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item6 );
 		
-		// the first selectable item
+		// the seventh selectable item
 		item7 = new CheckBox();
 		item7.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item7 );
 
-		// the second selectable item
+		// the eighth selectable item
 		item8 = new CheckBox();
 		item8.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item8 );
 		
-		// the first selectable item
+		// the ninth selectable item
 		item9 = new CheckBox();
 		item9.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item9 );
 
-		// the second selectable item
+		// the tenth selectable item
 		item10 = new CheckBox();
 		item10.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item10 );
 		
-		// the first selectable item
+		// the eleventh selectable item
 		item11 = new CheckBox();
 		item11.setStylePrimaryName( "weRecruitView-item" );
 		viewContainer.add( item11 );
 		
+		// the 12th selectable item
+		item12 = new CheckBox();
+		item12.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( item12 );
+		
+		// the 13th selectable item
+		item13 = new CheckBox();
+		item13.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( item13 );
+		
 		// the label where the information is combined
-		combinationLabel = new Label();
-		combinationLabel.setStylePrimaryName( "weRecruitView-combination" );
-		viewContainer.add( combinationLabel );
+		mailTo = new HTML();
+		mailTo.setStylePrimaryName( "weRecruitView-mailToHTML" );
+		viewContainer.add( mailTo );
 
 		// defines the container as the composite widget
 		initWidget( viewContainer );
@@ -101,7 +114,7 @@ public class WeRecruitView extends Composite implements
 	@Override
 	public void reset() {
 		// clears the combination label
-		combinationHasText().setText( "" );
+		mailToHasHTML().setHTML( "" );
 
 		// clears the selection widgets
 		item1HasText().setText( "" );
@@ -109,14 +122,42 @@ public class WeRecruitView extends Composite implements
 
 		item2HasText().setText( "" );
 		item2HasValue().setValue( false );
-	}
+		
+		item3HasText().setText( "" );
+		item3HasValue().setValue( false );
 
+		item4HasText().setText( "" );
+		item4HasValue().setValue( false );
+		
+		item5HasText().setText( "" );
+		item5HasValue().setValue( false );
+
+		item6HasText().setText( "" );
+		item6HasValue().setValue( false );
+		
+		item7HasText().setText( "" );
+		item7HasValue().setValue( false );
+
+		item8HasText().setText( "" );
+		item8HasValue().setValue( false );
+		
+		item9HasText().setText( "" );
+		item9HasValue().setValue( false );
+
+		item10HasText().setText( "" );
+		item10HasValue().setValue( false );
+		
+		item11HasText().setText( "" );
+		item11HasValue().setValue( false );
+		
+	}
+	
 	/**
 	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#combinationHasText()
 	 */
 	@Override
-	public HasText combinationHasText() {
-		return combinationLabel;
+	public HasHTML mailToHasHTML() {
+		return mailTo;
 	}
 
 	/**
@@ -293,5 +334,37 @@ public class WeRecruitView extends Composite implements
 	@Override
 	public HasValue<Boolean> item11HasValue() {
 		return item11;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item12HasText()
+	 */
+	@Override
+	public HasText item12HasText() {
+		return item12;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item12HasValue()
+	 */
+	@Override
+	public HasValue<Boolean> item12HasValue() {
+		return item12;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item13HasText()
+	 */
+	@Override
+	public HasText item13HasText() {
+		return item13;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item13HasValue()
+	 */
+	@Override
+	public HasValue<Boolean> item13HasValue() {
+		return item13;
 	}
 }
