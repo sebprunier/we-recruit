@@ -44,17 +44,17 @@ public class WeRecruitActivity extends
 		
 		view.item1HasText().setText( "I can implement this webapp with a lot of java frameworks" );
 		view.item2HasText().setText( "Even with other jvm based languages" );
-		view.item3HasText().setText( "WTF??!! Why aren't you using Maven? Give me 5 minutes, I'll mavenize it right now." );
+		view.item3HasText().setText( "Devoxx is like a pilgrimage!" );
 		view.item4HasText().setText( "Look at the product we developped! Let me spread the word during JUGs, conferences and on my blog!" );
 		view.item5HasText().setText( "Now it's time to get cloudy! AWS, App Engine, Rackspace, etc. have no secrets for me!" );
 		view.item6HasText().setText( "30 years old and still being a developer is not a crime!" );
 		view.item7HasText().setText( "Hey! Do you know that I hold scrums every day?" );
-		view.item8HasText().setText( "I know Guice, EMF, Spring, JPA, and even stuff you never heard about it!" );
+		view.item8HasText().setText( "I know IOC, Multithreading, Cache, Guice, EMF, Spring, JPA, and even stuff you never heard about it!" );
 		view.item9HasText().setText( "For example the open source project I participate." );
 		view.item10HasText().setText( "Equinox, Tomcat, JBoss, ... are my friends." );
 		view.item11HasText().setText( "My deepest dream is to be the java leader of the next killer open source framework" );
 		view.item12HasText().setText( "Model Driven Engineering doesn't give me spots! I think MDE is cool" );
-		view.item13HasText().setText( "I'm cool too ..." );
+		view.item13HasText().setText( "And I'm cool too ;)" );
 
 		// event handler registration
 		// 1. creates a boolean change handler
