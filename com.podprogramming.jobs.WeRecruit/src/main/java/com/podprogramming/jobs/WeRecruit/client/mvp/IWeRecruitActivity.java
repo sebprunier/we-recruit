@@ -35,185 +35,115 @@ public interface IWeRecruitActivity<V extends IWeRecruitActivity.IWeRecruitView>
 		public HasHTML mailToHasHTML();
 
 		/**
-		 * Returns the label of the 1st selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item1HasText();
-
-		/**
-		 * Returns the boolean holder of the 1st selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item1HasValue();
-
-		/**
-		 * Returns the label of the 2nd selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item2HasText();
-
-		/**
-		 * Returns the boolean holder of the 2nd selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item2HasValue();
+		public HasText q1Answer1HasText();
 		
 		/**
-		 * Returns the label of the 3rd selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item3HasText();
-
-		/**
-		 * Returns the boolean holder of the 3rd selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item3HasValue();
-
-		/**
-		 * Returns the label of the 4th selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item4HasText();
-
-		/**
-		 * Returns the boolean holder of the 4th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item4HasValue();
+		public HasValue<Boolean> q1Answer1HasValue();
 		
 		/**
-		 * Returns the label of the 5th selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item5HasText();
-
+		public HasText q1Answer2HasText();
 		/**
-		 * Returns the boolean holder of the 5th selection widget
 		 * 
-		 * @return
 		 */
-		public HasValue<Boolean> item5HasValue();
-
-		/**
-		 * Returns the label of the 6th selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item6HasText();
-
-		/**
-		 * Returns the boolean holder of the 6th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item6HasValue();
+		public HasValue<Boolean> q1Answer2HasValue();
 		
 		/**
-		 * Returns the label of the 7th selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item7HasText();
-
+		public HasText q1Answer3HasText();
 		/**
-		 * Returns the boolean holder of the 7th selection widget
 		 * 
-		 * @return
 		 */
-		public HasValue<Boolean> item7HasValue();
-
-		/**
-		 * Returns the label of the 8th selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item8HasText();
-
-		/**
-		 * Returns the boolean holder of the 8th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item8HasValue();
+		public HasValue<Boolean> q1Answer3HasValue();
 		
 		/**
-		 * Returns the label of the 9th selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item9HasText();
-
-		/**
-		 * Returns the boolean holder of the 9th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item9HasValue();
-
-		/**
-		 * Returns the label of the 10th selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item10HasText();
-
-		/**
-		 * Returns the boolean holder of the 10th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item10HasValue();
+		public HasText q2Answer1HasText();
 		
 		/**
-		 * Returns the label of the 11th selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item11HasText();
-
-		/**
-		 * Returns the boolean holder of the 11th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item11HasValue();
-
-		/**
-		 * Returns the label of the 12th selection widget
-		 * 
-		 * @return
-		 */
-		public HasText item12HasText();
-
-		/**
-		 * Returns the boolean holder of the 12th selection widget
-		 * 
-		 * @return
-		 */
-		public HasValue<Boolean> item12HasValue();
+		public HasValue<Boolean> q2Answer1HasValue();
 		
 		/**
-		 * Returns the label of the 13th selection widget
 		 * 
-		 * @return
 		 */
-		public HasText item13HasText();
-
+		public HasText q2Answer2HasText();
 		/**
-		 * Returns the boolean holder of the 13th selection widget
 		 * 
-		 * @return
 		 */
-		public HasValue<Boolean> item13HasValue();
+		public HasValue<Boolean> q2Answer2HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q2Answer3HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q2Answer3HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q3Answer1HasText();
+		
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q3Answer1HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q3Answer2HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q3Answer2HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q3Answer3HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q3Answer3HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q4Answer1HasText();
+		
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q4Answer1HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q4Answer2HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q4Answer2HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q4Answer3HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q4Answer3HasValue();
 	}
 }

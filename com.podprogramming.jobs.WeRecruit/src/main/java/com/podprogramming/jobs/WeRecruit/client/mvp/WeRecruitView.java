@@ -1,103 +1,113 @@
 package com.podprogramming.jobs.WeRecruit.client.mvp;
 
-import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * A view which implements the IWeRecruitActivity.IWeRecruitView interface in
  * order to be managed by the WeRecruitActivity
  */
-public class WeRecruitView extends Composite implements
-		IWeRecruitActivity.IWeRecruitView {
+public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRecruitView {
 
 	private final HTML mailTo;
-	private final CheckBox item1;
-	private final CheckBox item2;
-	private final CheckBox item3;
-	private final CheckBox item4;
-	private final CheckBox item5;
-	private final CheckBox item6;
-	private final CheckBox item7;
-	private final CheckBox item8;
-	private final CheckBox item9;
-	private final CheckBox item10;
-	private final CheckBox item11;
-	private final CheckBox item12;
-	private final CheckBox item13;
 
+	private final Label q1;
+	private final RadioButton q1Answer1;
+	private final RadioButton q1Answer2;
+	private final RadioButton q1Answer3;
+	
+	private final Label q2;
+	private final RadioButton q2Answer1;
+	private final RadioButton q2Answer2;
+	private final RadioButton q2Answer3;
+	
+	private final Label q3;
+	private final RadioButton q3Answer1;
+	private final RadioButton q3Answer2;
+	private final RadioButton q3Answer3;
+	
+	private final Label q4;
+	private final RadioButton q4Answer1;
+	private final RadioButton q4Answer2;
+	private final RadioButton q4Answer3;
+	
 	public WeRecruitView() {
 		VerticalPanel viewContainer = new VerticalPanel();
 		viewContainer.setStylePrimaryName( "weRecruitView-main" );
-
-		// the first selectable item
-		item1 = new CheckBox();
-		item1.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item1 );
-
-		// the second selectable item
-		item2 = new CheckBox();
-		item2.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item2 );
 		
-		// the third selectable item
-		item3 = new CheckBox();
-		item3.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item3 );
-
-		// the fourth selectable item
-		item4 = new CheckBox();
-		item4.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item4 );
+		// Question 1
+		q1 = new Label("Quelle annotation existe dans Guice?");
+		q1.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add(q1);
 		
-		// the fifth selectable item
-		item5 = new CheckBox();
-		item5.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item5 );
-
-		// the sixth selectable item
-		item6 = new CheckBox();
-		item6.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item6 );
+		q1Answer1 = new RadioButton("q1", "@Inject");
+		q1Answer1.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q1Answer1 );
 		
-		// the seventh selectable item
-		item7 = new CheckBox();
-		item7.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item7 );
-
-		// the eighth selectable item
-		item8 = new CheckBox();
-		item8.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item8 );
+		q1Answer2 = new RadioButton("q1", "@Injection");
+		q1Answer2.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q1Answer2 );
 		
-		// the ninth selectable item
-		item9 = new CheckBox();
-		item9.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item9 );
-
-		// the tenth selectable item
-		item10 = new CheckBox();
-		item10.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item10 );
+		q1Answer3 = new RadioButton("q1", "@Deprecated");
+		q1Answer3.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q1Answer3 );
 		
-		// the eleventh selectable item
-		item11 = new CheckBox();
-		item11.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item11 );
+		// Question 2
+		q2 = new Label("SaaS veut dire");
+		q2.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add(q2);
 		
-		// the 12th selectable item
-		item12 = new CheckBox();
-		item12.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item12 );
+		q2Answer1 = new RadioButton("q2", "Software as a Service");
+		q2Answer1.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q2Answer1 );
 		
-		// the 13th selectable item
-		item13 = new CheckBox();
-		item13.setStylePrimaryName( "weRecruitView-item" );
-		viewContainer.add( item13 );
+		q2Answer2 = new RadioButton("q2", "System as a Service");
+		q2Answer2.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q2Answer2 );
+		
+		q2Answer3 = new RadioButton("q2", "Obiwan Kenobi");
+		q2Answer3.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q2Answer3 );
+		
+		// Question 3
+		q3 = new Label("double number = (Double)null;");
+		q3.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add(q3);
+		
+		q3Answer1 = new RadioButton("q3", "Ne compile pas.");
+		q3Answer1.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q3Answer1 );
+		
+		q3Answer2 = new RadioButton("q3", "Renvoie une NumberFormatException à l'éxécution.");
+		q3Answer2.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q3Answer2 );
+		
+		q3Answer3 = new RadioButton("q3", "Renvoie une NullPointerException à l'exécution.");
+		q3Answer3.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q3Answer3 );
+		
+		// Question 4
+		q4 = new Label("GoF signifie :");
+		q4.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add(q4);
+		
+		q4Answer1 = new RadioButton("q4", "Getter on Field");
+		q4Answer1.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q4Answer1 );
+		
+		q4Answer2 = new RadioButton("q4", "Gang of Four");
+		q4Answer2.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q4Answer2 );
+		
+		q4Answer3 = new RadioButton("q4", "Good old Frame");
+		q4Answer3.setStylePrimaryName( "weRecruitView-item" );
+		viewContainer.add( q4Answer3 );
 		
 		// the label where the information is combined
 		mailTo = new HTML();
@@ -117,38 +127,7 @@ public class WeRecruitView extends Composite implements
 		mailToHasHTML().setHTML( "" );
 
 		// clears the selection widgets
-		item1HasText().setText( "" );
-		item1HasValue().setValue( false );
-
-		item2HasText().setText( "" );
-		item2HasValue().setValue( false );
 		
-		item3HasText().setText( "" );
-		item3HasValue().setValue( false );
-
-		item4HasText().setText( "" );
-		item4HasValue().setValue( false );
-		
-		item5HasText().setText( "" );
-		item5HasValue().setValue( false );
-
-		item6HasText().setText( "" );
-		item6HasValue().setValue( false );
-		
-		item7HasText().setText( "" );
-		item7HasValue().setValue( false );
-
-		item8HasText().setText( "" );
-		item8HasValue().setValue( false );
-		
-		item9HasText().setText( "" );
-		item9HasValue().setValue( false );
-
-		item10HasText().setText( "" );
-		item10HasValue().setValue( false );
-		
-		item11HasText().setText( "" );
-		item11HasValue().setValue( false );
 		
 	}
 	
@@ -161,210 +140,194 @@ public class WeRecruitView extends Composite implements
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item1HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer1HasText()
 	 */
 	@Override
-	public HasText item1HasText() {
-		return item1;
+	public HasText q1Answer1HasText() {
+		return q1Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item1HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer1HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item1HasValue() {
-		return item1;
+	public HasValue<Boolean> q1Answer1HasValue() {
+		return q1Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item2HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer2HasText()
 	 */
 	@Override
-	public HasText item2HasText() {
-		return item2;
+	public HasText q1Answer2HasText() {
+		return q1Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item2HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer2HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item2HasValue() {
-		return item2;
+	public HasValue<Boolean> q1Answer2HasValue() {
+		return q1Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item3HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer3HasText()
 	 */
 	@Override
-	public HasText item3HasText() {
-		return item3;
+	public HasText q1Answer3HasText() {
+		return q1Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item3HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q1Answer3HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item3HasValue() {
-		return item3;
+	public HasValue<Boolean> q1Answer3HasValue() {
+		return q1Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item4HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer1HasText()
 	 */
 	@Override
-	public HasText item4HasText() {
-		return item4;
+	public HasText q2Answer1HasText() {
+		return q2Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item4HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer1HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item4HasValue() {
-		return item4;
+	public HasValue<Boolean> q2Answer1HasValue() {
+		return q2Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item5HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer2HasText()
 	 */
 	@Override
-	public HasText item5HasText() {
-		return item5;
+	public HasText q2Answer2HasText() {
+		return q2Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item5HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer2HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item5HasValue() {
-		return item5;
+	public HasValue<Boolean> q2Answer2HasValue() {
+		return q2Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item6HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer3HasText()
 	 */
 	@Override
-	public HasText item6HasText() {
-		return item6;
+	public HasText q2Answer3HasText() {
+		return q2Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item6HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q2Answer3HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item6HasValue() {
-		return item6;
+	public HasValue<Boolean> q2Answer3HasValue() {
+		return q2Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item7HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer1HasText()
 	 */
 	@Override
-	public HasText item7HasText() {
-		return item7;
+	public HasText q3Answer1HasText() {
+		return q3Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item7HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer1HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item7HasValue() {
-		return item7;
+	public HasValue<Boolean> q3Answer1HasValue() {
+		return q3Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item8HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer2HasText()
 	 */
 	@Override
-	public HasText item8HasText() {
-		return item8;
+	public HasText q3Answer2HasText() {
+		return q3Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item8HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer2HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item8HasValue() {
-		return item8;
+	public HasValue<Boolean> q3Answer2HasValue() {
+		return q3Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item9HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer3HasText()
 	 */
 	@Override
-	public HasText item9HasText() {
-		return item9;
+	public HasText q3Answer3HasText() {
+		return q3Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item9HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q3Answer3HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item9HasValue() {
-		return item9;
+	public HasValue<Boolean> q3Answer3HasValue() {
+		return q3Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item10HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer1HasText()
 	 */
 	@Override
-	public HasText item10HasText() {
-		return item10;
+	public HasText q4Answer1HasText() {
+		return q4Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item10HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer1HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item10HasValue() {
-		return item10;
+	public HasValue<Boolean> q4Answer1HasValue() {
+		return q4Answer1;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item11HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer2HasText()
 	 */
 	@Override
-	public HasText item11HasText() {
-		return item11;
+	public HasText q4Answer2HasText() {
+		return q4Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item11HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer2HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item11HasValue() {
-		return item11;
+	public HasValue<Boolean> q4Answer2HasValue() {
+		return q4Answer2;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item12HasText()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer3HasText()
 	 */
 	@Override
-	public HasText item12HasText() {
-		return item12;
+	public HasText q4Answer3HasText() {
+		return q4Answer3;
 	}
 
 	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item12HasValue()
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q4Answer3HasValue()
 	 */
 	@Override
-	public HasValue<Boolean> item12HasValue() {
-		return item12;
-	}
-
-	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item13HasText()
-	 */
-	@Override
-	public HasText item13HasText() {
-		return item13;
-	}
-
-	/**
-	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#item13HasValue()
-	 */
-	@Override
-	public HasValue<Boolean> item13HasValue() {
-		return item13;
+	public HasValue<Boolean> q4Answer3HasValue() {
+		return q4Answer3;
 	}
 }
