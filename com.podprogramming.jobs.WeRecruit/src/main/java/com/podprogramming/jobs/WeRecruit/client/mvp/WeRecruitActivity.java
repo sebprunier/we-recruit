@@ -73,6 +73,12 @@ public class WeRecruitActivity extends
 				booleanChangeHandler ) );
 		registerHandler( view.q4Answer3HasValue().addValueChangeHandler(
 				booleanChangeHandler ) );
+		registerHandler( view.q5Answer1HasValue().addValueChangeHandler(
+				booleanChangeHandler ) );
+		registerHandler( view.q5Answer2HasValue().addValueChangeHandler(
+				booleanChangeHandler ) );
+		registerHandler( view.q5Answer3HasValue().addValueChangeHandler(
+				booleanChangeHandler ) );
 
 		// attaches the view in the container widget of the application
 		containerWidget.setWidget( view.asWidget() );
@@ -87,7 +93,8 @@ public class WeRecruitActivity extends
 		boolean youWin = view.q1Answer1HasValue().getValue()
 							&& view.q2Answer1HasValue().getValue()
 							&& view.q3Answer3HasValue().getValue()
-							&& view.q4Answer2HasValue().getValue();
+							&& view.q4Answer2HasValue().getValue()
+							&& view.q5Answer2HasValue().getValue();
 		// computes the combination message
 		String combinationMessage = "";
 		if( youWin ) {

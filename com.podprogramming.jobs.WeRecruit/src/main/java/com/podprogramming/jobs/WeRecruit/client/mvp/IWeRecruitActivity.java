@@ -145,5 +145,33 @@ public interface IWeRecruitActivity<V extends IWeRecruitActivity.IWeRecruitView>
 		 * 
 		 */
 		public HasValue<Boolean> q4Answer3HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q5Answer1HasText();
+		
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q5Answer1HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q5Answer2HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q5Answer2HasValue();
+		
+		/**
+		 * 
+		 */
+		public HasText q5Answer3HasText();
+		/**
+		 * 
+		 */
+		public HasValue<Boolean> q5Answer3HasValue();
 	}
 }
