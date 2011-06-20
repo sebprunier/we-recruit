@@ -120,7 +120,7 @@ public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRe
 		q5.setStylePrimaryName( "weRecruitView-question" );
 		viewContainer.add(q5);
 		
-		q5Answer1 = new RadioButton("q5", "Integration on Clood");
+		q5Answer1 = new RadioButton("q5", "Integration on Cloud");
 		q5Answer1.setStylePrimaryName( "weRecruitView-answer" );
 		viewContainer.add( q5Answer1 );
 		
