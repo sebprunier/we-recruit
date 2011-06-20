@@ -37,6 +37,11 @@ public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRe
 	private final RadioButton q4Answer2;
 	private final RadioButton q4Answer3;
 	
+	private final Label q5;
+	private final RadioButton q5Answer1;
+	private final RadioButton q5Answer2;
+	private final RadioButton q5Answer3;
+	
 	public WeRecruitView() {
 		//VerticalPanel viewContainer = new VerticalPanel();
 		FlowPanel viewContainer = new FlowPanel();
@@ -109,6 +114,23 @@ public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRe
 		q4Answer3 = new RadioButton("q4", "Good old Frame");
 		q4Answer3.setStylePrimaryName( "weRecruitView-answer" );
 		viewContainer.add( q4Answer3 );
+		
+		// Question 5
+		q5 = new Label("IoC signifie :");
+		q5.setStylePrimaryName( "weRecruitView-question" );
+		viewContainer.add(q5);
+		
+		q5Answer1 = new RadioButton("q5", "Integration on Clood");
+		q5Answer1.setStylePrimaryName( "weRecruitView-answer" );
+		viewContainer.add( q5Answer1 );
+		
+		q5Answer2 = new RadioButton("q5", "Inversion of Control");
+		q5Answer2.setStylePrimaryName( "weRecruitView-answer" );
+		viewContainer.add( q5Answer2 );
+		
+		q5Answer3 = new RadioButton("q5", "Implementation over Crap");
+		q5Answer3.setStylePrimaryName( "weRecruitView-answer" );
+		viewContainer.add( q5Answer3 );
 		
 		// the label where the information is combined
 		mailTo = new HTML();
@@ -330,5 +352,53 @@ public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRe
 	@Override
 	public HasValue<Boolean> q4Answer3HasValue() {
 		return q4Answer3;
+	}
+	
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer1HasText()
+	 */
+	@Override
+	public HasText q5Answer1HasText() {
+		return q5Answer1;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer1HasValue()
+	 */
+	@Override
+	public HasValue<Boolean> q5Answer1HasValue() {
+		return q5Answer1;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer2HasText()
+	 */
+	@Override
+	public HasText q5Answer2HasText() {
+		return q5Answer2;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer2HasValue()
+	 */
+	@Override
+	public HasValue<Boolean> q5Answer2HasValue() {
+		return q5Answer2;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer3HasText()
+	 */
+	@Override
+	public HasText q5Answer3HasText() {
+		return q5Answer3;
+	}
+
+	/**
+	 * @see com.podprogramming.jobs.WeRecruit.client.mvp.IWeRecruitActivity.IWeRecruitView#q5Answer3HasValue()
+	 */
+	@Override
+	public HasValue<Boolean> q5Answer3HasValue() {
+		return q5Answer3;
 	}
 }
