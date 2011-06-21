@@ -1,13 +1,15 @@
 package com.podprogramming.jobs.WeRecruit.client.mvp;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.HasValue;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RadioButton;
+import com.google.gwt.user.client.ui.Widget;
 
 /**
  * A view which implements the IWeRecruitActivity.IWeRecruitView interface in
@@ -15,130 +17,52 @@ import com.google.gwt.user.client.ui.RadioButton;
  */
 public class WeRecruitView extends Composite implements IWeRecruitActivity.IWeRecruitView {
 
-	private final HTML mailTo;
+	
+	protected static WeRecruitView2UiBinder uiBinder = GWT.create(WeRecruitView2UiBinder.class);
 
-	private final Label q1;
-	private final RadioButton q1Answer1;
-	private final RadioButton q1Answer2;
-	private final RadioButton q1Answer3;
+	interface WeRecruitView2UiBinder extends UiBinder<Widget, WeRecruitView> {
+	}
 	
-	private final Label q2;
-	private final RadioButton q2Answer1;
-	private final RadioButton q2Answer2;
-	private final RadioButton q2Answer3;
+	@UiField
+	protected HTML mailTo;
+
+	@UiField
+	protected RadioButton q1Answer1;
+	@UiField
+	protected RadioButton q1Answer2;
+	@UiField
+	protected RadioButton q1Answer3;
 	
-	private final Label q3;
-	private final RadioButton q3Answer1;
-	private final RadioButton q3Answer2;
-	private final RadioButton q3Answer3;
+	@UiField
+	protected RadioButton q2Answer1;
+	@UiField
+	protected RadioButton q2Answer2;
+	@UiField
+	protected RadioButton q2Answer3;
 	
-	private final Label q4;
-	private final RadioButton q4Answer1;
-	private final RadioButton q4Answer2;
-	private final RadioButton q4Answer3;
+	@UiField
+	protected RadioButton q3Answer1;
+	@UiField
+	protected RadioButton q3Answer2;
+	@UiField
+	protected RadioButton q3Answer3;
 	
-	private final Label q5;
-	private final RadioButton q5Answer1;
-	private final RadioButton q5Answer2;
-	private final RadioButton q5Answer3;
+	@UiField
+	protected RadioButton q4Answer1;
+	@UiField
+	protected RadioButton q4Answer2;
+	@UiField
+	protected RadioButton q4Answer3;
+	
+	@UiField
+	protected RadioButton q5Answer1;
+	@UiField
+	protected RadioButton q5Answer2;
+	@UiField
+	protected RadioButton q5Answer3;
 	
 	public WeRecruitView() {
-		//VerticalPanel viewContainer = new VerticalPanel();
-		FlowPanel viewContainer = new FlowPanel();
-		viewContainer.setStylePrimaryName( "weRecruitView-main" );
-		
-		// Question 1
-		q1 = new Label("Quelle annotation existe dans Guice?");
-		q1.setStylePrimaryName( "weRecruitView-question" );
-		viewContainer.add(q1);
-		
-		q1Answer1 = new RadioButton("q1", "@Inject");
-		q1Answer1.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q1Answer1 );
-		
-		q1Answer2 = new RadioButton("q1", "@Injection");
-		q1Answer2.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q1Answer2 );
-		
-		q1Answer3 = new RadioButton("q1", "@Deprecated");
-		q1Answer3.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q1Answer3 );
-		
-		// Question 2
-		q2 = new Label("SaaS veut dire");
-		q2.setStylePrimaryName( "weRecruitView-question" );
-		viewContainer.add(q2);
-		
-		q2Answer1 = new RadioButton("q2", "Software as a Service");
-		q2Answer1.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q2Answer1 );
-		
-		q2Answer2 = new RadioButton("q2", "System as a Service");
-		q2Answer2.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q2Answer2 );
-		
-		q2Answer3 = new RadioButton("q2", "Obiwan Kenobi");
-		q2Answer3.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q2Answer3 );
-		
-		// Question 3
-		q3 = new Label("double number = (Double)null;");
-		q3.setStylePrimaryName( "weRecruitView-question" );
-		viewContainer.add(q3);
-		
-		q3Answer1 = new RadioButton("q3", "Ne compile pas.");
-		q3Answer1.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q3Answer1 );
-		
-		q3Answer2 = new RadioButton("q3", "Renvoie une NumberFormatException à l'éxécution.");
-		q3Answer2.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q3Answer2 );
-		
-		q3Answer3 = new RadioButton("q3", "Renvoie une NullPointerException à l'exécution.");
-		q3Answer3.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q3Answer3 );
-		
-		// Question 4
-		q4 = new Label("GoF signifie :");
-		q4.setStylePrimaryName( "weRecruitView-question" );
-		viewContainer.add(q4);
-		
-		q4Answer1 = new RadioButton("q4", "Getter on Field");
-		q4Answer1.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q4Answer1 );
-		
-		q4Answer2 = new RadioButton("q4", "Gang of Four");
-		q4Answer2.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q4Answer2 );
-		
-		q4Answer3 = new RadioButton("q4", "Good old Frame");
-		q4Answer3.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q4Answer3 );
-		
-		// Question 5
-		q5 = new Label("IoC signifie :");
-		q5.setStylePrimaryName( "weRecruitView-question" );
-		viewContainer.add(q5);
-		
-		q5Answer1 = new RadioButton("q5", "Integration on Clood");
-		q5Answer1.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q5Answer1 );
-		
-		q5Answer2 = new RadioButton("q5", "Inversion of Control");
-		q5Answer2.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q5Answer2 );
-		
-		q5Answer3 = new RadioButton("q5", "Implementation over Crap");
-		q5Answer3.setStylePrimaryName( "weRecruitView-answer" );
-		viewContainer.add( q5Answer3 );
-		
-		// the label where the information is combined
-		mailTo = new HTML();
-		mailTo.setStylePrimaryName( "weRecruitView-mail" );
-		viewContainer.add( mailTo );
-
-		// defines the container as the composite widget
-		initWidget( viewContainer );
+		initWidget(uiBinder.createAndBindUi(this));
 	}
 
 	/**
