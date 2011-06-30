@@ -4,9 +4,26 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>WeRecruit.html</welcome-file>
-  </welcome-file-list>
+
+	<!-- JSF configuration -->
+	<context-param>
+		<param-name>org.richfaces.skin</param-name>
+		<param-value>blueSky</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 
 </web-app>
