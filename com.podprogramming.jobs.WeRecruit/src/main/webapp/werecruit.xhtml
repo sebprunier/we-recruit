@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:m="http://code.google.com/p/gmaps4jsf/">
+
+<ui:composition template="/template/template.xhtml">
+	<ui:define name="forked-content">
+
+
+
+		<rich:collapsiblePanel header="Voici l'offre" switchType="client"
+			expanded="true">
+			<div>
+				Pod Programming est une jeune startup dont le but est de faciliter
+				le cycle de vie de votre système d'information en proposant une
+				technique de modélisation innovante de vos données permettant de les
+				gérer au runtime.<br /> Pour cela, nous proposons une solution
+				dirigée par les modèles. Cette solution se compose d'un atelier de
+				modélisation vous permettant de décrire votre logique métier ainsi
+				que d'un ensemble de frameworks interprétant vos modèles (Business
+				logic, Contraintes, UI, Persistance, Business process, etc.).<br />
+				Afin de développer cet ensemble de frameworks, nous cherchons un
+				développeur java talentueux. Nous recherchons une personne :
+				<ul>
+					<li>Qui possède une super connaissance des frameworks java.</li>
+					<li>Et des autres langages de la JVM !</li>
+					<li>Qui est très active dans la communauté (conférences, blog,
+						JUGs, etc.).</li>
+					<li>Qui est/sera fière d'être encore programmeur/euse à 30 ans
+						!</li>
+					<li>Qui bosse agile.</li>
+					<li>Qui connaît l'IOC, le Multithreading, la gestion de cache,
+						et encore plus !</li>
+					<li>Qui est très au fait des dernières technos (serveurs,
+						framework, cloud, etc.).</li>
+					<li>Qui a une forte volonté de contribuer à des projets open
+						source.</li>
+					<li>Qui n'a pas peur de l'ingénierie des modèles (MDE).</li>
+					<li>Et surtout une personne qui soit prête à nous le montrer,
+						alors à vos forks !</li>
+				</ul>
+
+				Pour cela nous vous proposons :
+				<ul>
+					<li>Un poste basé à Rennes, mais le télétravail est
+						envisageable si vous nous épatez.</li>
+					<li>Des conditions de travail et un salaire motivants.</li>
+					<li>Un super défi à relever !</li>
+				</ul>
+
+				N'hésitez pas à bloguer et tweeter au maximum cette offre (en
+				mentionnant le compte twitter @podProg) pour avoir une chance de
+				gagner par tirage au sort le livre IT de votre choix ! (Tirage au
+				sort le 21 juillet 2011, livre devant être dispo sur amazon France)<br />
+			</div>
+		</rich:collapsiblePanel>
+
+		<rich:collapsiblePanel
+			header="Pour pouvoir postuler ... répondez au questionnaire !"
+			switchType="client" expanded="false">
+			<a4j:region>
+				<h:form>
+					<h:panelGrid columns="2">
+						<h:panelGrid columns="1">
+							<h:outputText value="Quelle annotation existe dans Guice ?" />
+							<h:selectOneRadio id="answers1" value="#{quizzMB.answer1}"
+								layout="pageDirection">
+								<a4j:ajax event="click" render="winnerMessage" />
+								<f:selectItem itemLabel="@Inject" itemValue="1" />
+								<f:selectItem itemLabel="@Injection" itemValue="2" />
+								<f:selectItem itemLabel="@Deprecated" itemValue="3" />
+							</h:selectOneRadio>
+							<br />
+							<h:outputText value="SaaS veut dire :" />
+							<h:selectOneRadio id="answers2" value="#{quizzMB.answer2}"
+								layout="pageDirection">
+								<a4j:ajax event="click" render="winnerMessage" />
+								<f:selectItem itemLabel="Software as a Service" itemValue="1" />
+								<f:selectItem itemLabel="System as a Service" itemValue="2" />
+								<f:selectItem itemLabel="Obiwan Kenobi" itemValue="3" />
+							</h:selectOneRadio>
+							<br />
+							<h:outputText value="double number = (Double)null;" />
+							<h:selectOneRadio id="answers3" value="#{quizzMB.answer3}"
+								layout="pageDirection">
+								<a4j:ajax event="click" render="winnerMessage" />
+								<f:selectItem itemLabel="Ne compile pas." itemValue="1" />
+								<f:selectItem
+									itemLabel="Renvoie une NumberFormatException à l'éxécution."
+									itemValue="2" />
+								<f:selectItem
+									itemLabel="Renvoie une NullPointerException à l'exécution."
+									itemValue="3" />
+							</h:selectOneRadio>
+							<br />
+							<h:outputText value="GoF signifie :" />
+							<h:selectOneRadio id="answers4" value="#{quizzMB.answer4}"
+								layout="pageDirection">
+								<a4j:ajax event="click" render="winnerMessage" />
+								<f:selectItem itemLabel="Getter on Field" itemValue="1" />
+								<f:selectItem itemLabel="Gang of Four" itemValue="2" />
+								<f:selectItem itemLabel="Good old Frame" itemValue="3" />
+							</h:selectOneRadio>
+							<br />
+							<h:outputText value="IoC signifie :" />
+							<h:selectOneRadio id="answers5" value="#{quizzMB.answer5}"
+								layout="pageDirection">
+								<a4j:ajax event="click" render="winnerMessage" />
+								<f:selectItem itemLabel="Integration on Cloud" itemValue="1" />
+								<f:selectItem itemLabel="Inversion of Control" itemValue="2" />
+								<f:selectItem itemLabel="Implementation over Crap" itemValue="3" />
+							</h:selectOneRadio>
+						</h:panelGrid>
+						<h:panelGrid id="winnerMessage">
+							<rich:panel style="width:400px; margin-left:200px;"
+								rendered="#{quizzMB.result == 'true'}">
+								<f:facet name="header">
+									<h:outputText value="Bravo !!! Voici le message de Pod Programming" style="font-weight:bold" />
+								</f:facet>
+								<h:graphicImage
+									value="http://upload.wikimedia.org/wikipedia/commons/1/1c/Nuvola_apps_korganizer.png" />
+								<h:outputText value="#{quizzMB.message}" escape="false" />
+							</rich:panel>
+						</h:panelGrid>
+					</h:panelGrid>
+				</h:form>
+			</a4j:region>
+		</rich:collapsiblePanel>
+		<a name="jugs" />
+		<rich:collapsiblePanel id="jugsPanel"
+			header="JUG, ça vous dit quelque chose ?" switchType="client"
+			expanded="false">
+			<script
+				src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAgnIJI6PtyN2HLiLR6cNCkhTbbxlLCFGbOEXZufQCaNkhlrbdgBRSncFPlIf5IO7iGaHdcnzAu3SHbQ"
+				type="text/javascript">
+				
+			</script>
+			<h:form>
+				<a4j:outputPanel id="ajaxPanel" layout="block">
+					<h:panelGrid columns="2">
+						<h:panelGrid columns="1">
+							<a4j:repeat value="#{jugsMB.jugs}" var="jug">
+								<rich:panel
+									style="float:left; width:160px; height:140px; padding:5px;">
+									<f:facet name="header">
+										<h:panelGroup>
+											<h:outputText value="#{jug.name}" style="font-weight:bold" />
+										</h:panelGroup>
+									</f:facet>
+									<h:panelGrid columns="1">
+										<h:graphicImage value="#{jug.logoUrl}" style="height:70px;" />
+										<a4j:commandLink id="cmdShow" value="Voir sur la carte"
+											render="ajaxPanel">
+											<a4j:param assignTo="#{jugsMB.selectedJugName}"
+												value="#{jug.name}" />
+											<a4j:param assignTo="#{jugsMB.selectedJugXPosition}"
+												value="#{jug.xPosition}" />
+											<a4j:param assignTo="#{jugsMB.selectedJugYPosition}"
+												value="#{jug.yPosition}" />
+											<a4j:param assignTo="#{jugsMB.selectedJugWebSiteUrl}"
+												value="#{jug.webSiteUrl}" />
+										</a4j:commandLink>
+									</h:panelGrid>
+								</rich:panel>
+							</a4j:repeat>
+
+						</h:panelGrid>
+						<m:map id="map" width="400px" height="400px"
+							latitude="#{jugsMB.selectedJugXPosition}"
+							longitude="#{jugsMB.selectedJugYPosition}" zoom="6"
+							partiallyTriggered="true">
+							<m:marker id="marker" latitude="#{jugsMB.selectedJugXPosition}"
+								longitude="#{jugsMB.selectedJugYPosition}" />
+							<m:htmlInformationWindow id="window"
+								htmlText="#{jugsMB.selectedJugName} &lt;br/&gt; &lt;a href='#{jugsMB.selectedJugWebSiteUrl}'&gt;#{jugsMB.selectedJugWebSiteUrl}&lt;/a&gt;" />
+							<m:mapControl name="GLargeMapControl"
+								position="G_ANCHOR_BOTTOM_RIGHT" />
+							<m:mapControl name="GMapTypeControl"
+								position="G_ANCHOR_TOP_RIGHT" />
+						</m:map>
+					</h:panelGrid>
+				</a4j:outputPanel>
+			</h:form>
+		</rich:collapsiblePanel>
+
+	</ui:define>
+</ui:composition>
+</html>

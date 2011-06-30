@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<h:head>
+	<title>PodProgramming recrute !</title>
+	<link
+		href="#{facesContext.externalContext.requestContextPath}/css/WeRecruit.css"
+		type="text/css" rel="stylesheet" />
+</h:head>
+<h:body>
+
+	<noscript>
+		<div
+			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+
+	<a href="https://github.com/podProgramming/we-recruit" target="_blank"><img
+		style="position: absolute; top: 0; left: 0; border: 0;"
+		src="https://d3nwyuy0nl342s.cloudfront.net/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67"
+		alt="Fork me on GitHub" /> </a>
+
+	<h1>
+		Pod Programming recrute ... de manière originale ! <a
+			href="http://twitter.com/share" class="twitter-share-button"
+			data-url="http://bit.ly/weRecruit"
+			data-text="@podProg recrute! Jettez un oeil à l'annonce ici :"
+			data-count="vertical">Tweet</a>
+		<script type="text/javascript"
+			src="http://platform.twitter.com/widgets.js"></script>
+	</h1>
+
+	<ui:insert name="forked-content">Content displayed from Template </ui:insert>
+
+	<rich:panel>
+		<h:graphicImage
+			value="http://t2.gstatic.com/images?q=tbn:ANd9GcTBvIaRL071S15HDUHuzV5BXjal-SEqncFoKML6xznWTn9r2YP-Tg"
+			height="20px" />
+		<a href="https://github.com/sebprunier/we-recruit" target="_blank">&#160;Fork</a>
+		<h:outputText> réalisé par </h:outputText>
+		<a href="http://twitter.com/#!/sebprunier" target="_blank">SebPrunier</a>
+		<h:outputText>&#160;|&#160;</h:outputText>
+		<h:graphicImage
+			value="http://t0.gstatic.com/images?q=tbn:ANd9GcSG0Ujo3jJIGGJIxWjbslDD_ctHuHUp_S0bqppVXFEyLb6uJ0Rj"
+			height="20px" />
+		<h:outputText>&#160;Powered by </h:outputText>
+		<a href="http://www.cloudbees.com" target="_blank">CloudBees</a>
+	</rich:panel>
+
+	<a4j:outputPanel id="fork-process">
+		<h:graphicImage value="/img/My_Fork_1.0.png" alt="fork process" />
+	</a4j:outputPanel>
+
+	<rich:jQuery selector="#fork-process img"
+		query="addClass('pic-normal')" />
+	<rich:jQuery selector="#fork-process img"
+		query="wrap('&lt;div class=\'wrap1\'&gt;&lt;/div&gt;')" />
+	<rich:jQuery selector="#fork-process img" event="mouseover"
+		query="jQuery(this).stop().animate({width:'1104px'})" />
+	<rich:jQuery selector="#fork-process img" event="mouseout"
+		query="jQuery(this).stop().animate({width:'120px'})" />
+
+</h:body>
+</html>
