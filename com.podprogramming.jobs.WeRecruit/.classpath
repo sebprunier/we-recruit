@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
-	<classpathentry kind="src" output="target/classes" path="src/main/resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/commons-digester/commons-digester/jars/commons-digester-1.8.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/commons-codec/commons-codec/jars/commons-codec-1.3.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/commons-collections/commons-collections/jars/commons-collections-3.2.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/developpement/workspaces/workspace-werecruit/we-recruit/com.podprogramming.jobs.WeRecruit/lib/gmaps4jsf-1.1.4.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/com.google.guava/guava/jars/guava-r08.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.8.3.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/javax.servlet/jstl/jars/jstl-1.2.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.richfaces.core/richfaces-core-api/jars/richfaces-core-api-4.0.0.Final.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.apache.myfaces.core/myfaces-api/jars/myfaces-api-2.0.7.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/net.sourceforge.cssparser/cssparser/jars/cssparser-0.9.5.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.richfaces.core/richfaces-core-impl/jars/richfaces-core-impl-4.0.0.Final.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.w3c.css/sac/jars/sac-1.3.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.apache.myfaces.core/myfaces-impl/jars/myfaces-impl-2.0.7.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.richfaces.ui/richfaces-components-api/jars/richfaces-components-api-4.0.0.Final.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Sébastien/.gradle/cache/org.richfaces.ui/richfaces-components-ui/jars/richfaces-components-ui-4.0.0.Final.jar" exported="true"/>
 </classpath>

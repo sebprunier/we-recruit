@@ -1,0 +1,27 @@
+apply plugin: 'war'
+apply plugin: 'eclipse'
+
+group = 'com.podprogramming.jobs'
+version = '1.0.0'
+archivesBaseName = 'WeRecruit'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+	mavenCentral()
+	flatDir name: 'localRepository', dirs: 'lib'
+	mavenRepo urls: 'http://repository.jboss.org/nexus/content/groups/public-jboss'
+}
+
+List myfaces = ['org.apache.myfaces.core:myfaces-api:2.0.7','org.apache.myfaces.core:myfaces-impl:2.0.7']
+List richfaces = ['org.richfaces.core:richfaces-core-impl:4.0.0.Final','org.richfaces.ui:richfaces-components-ui:4.0.0.Final']
+List others = ['com.googlecode.gmaps4jsf:gmaps4jsf:1.1.4','javax.servlet:jstl:1.2']
+
+dependencies {
+	compile myfaces, richfaces, others
+}
+
+eclipseClasspath {
+	downloadSources = false
+}
